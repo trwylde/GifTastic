@@ -11,7 +11,7 @@ var cutOffRating = "PG";
 function renderButtons(){
 	for(var i = 0; i < topics.length; i++) {
 		var newButton = $("<button>");
-		newButton.addClass("btn");
+		newButton.addClass("btn btn-outline-info");
 		newButton.addClass("bookTitle-button");
 		newButton.text(topics[i]);
 		$("#button-container").append(newButton);
@@ -37,7 +37,7 @@ function addButton(movie){
 function populateGIFContainer(movie){
 	$.ajax({
 		url: "https://api.giphy.com/v1/gifs/search?q=" + movie + 
-		"&api_key=61TKqzUDPHfv40Bqr6iEsqqBCfa360mt&rating=" + cutOffRating + "&limit=" + numberOfGIFs,
+		"&api_key=UJ4rcCIsCqw4544MYn2mPanM2ZuoI0fX&rating=" + cutOffRating + "&limit=" + numberOfGIFs,
 		method: "GET"
 	}).then(function(response){
 		response.data.forEach(function(element){
