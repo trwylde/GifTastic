@@ -13,8 +13,38 @@
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-  <h1>Books are GifTastic!</h1>
-    <h3>Check out these GIFs of our favorite film adaptations!</h3>
+    
+    <div class = "row">
+      <h1 class="col-sm-3">Books are GifTastic!</h1>
+      <div class="col-sm-2"></div>
+      <h4 class="col-sm-8">Check out these GIFs of our favorite film adaptations!</h4>
+
+      <div id="button-container" class="row justify-content-center col-md-9">
+      </div>
+    </div>
+
+        
+    <div class="container-fluid">
+      <h4 class="ml-auto justify-content-right col-md-4">
+                Enter your favorite film adaptation and a button will appear!</h4>
+          
+      <div class="ml-auto input-group mb-3 justify-content-right col-md-4">
+        <input type="text" class="form-control" placeholder="Your favorite adaptation"  
+                aria-label="user-fav-adaptation" aria-describedby="button-addon2" id="user-fav-adaptation">
+        <div class="input-group-append">
+          <button class="btn btn-outline-info" type="submit" id="submit">Find It!</button>
+        </div>
+      </div>
+  
+      </div>
+
+    <div id="gif-container" class = "row justify-content-around col-md-8">
+    </div>
+    
+  
+  
+
+<!--
   <div class= "container-fluid" id="row1">
     <div class="buttons justify-content-left col-lg-8">
       <button type="button" class="btn btn-outline-info" data-title="the notebook">
@@ -29,7 +59,7 @@
         Anna Karenina
       </button>
 
-      <button type="button" class="btn btn-outline-info" data-title="the lion the withch and the wardrobe">
+      <button type="button" class="btn btn-outline-info" data-title="the lion the witch and the wardrobe">
         The Lion, the Witch and the Wardrobe
       </button>
 
@@ -66,7 +96,7 @@
     <div class="container-fluid">
       <h4 class="ml-auto justify-content-right col-md-4">Enter your favorite film adaptation</h4>
       <div class="ml-auto input-group mb-3 justify-content-right col-md-4">
-      <input type="text" class="form-control" placeholder="Your favorite adaptation" aria-label="users-fav-adaptation" aria-describedby="button-addon2">
+      <input type="text" class="form-control" placeholder="Your favorite adaptation" aria-label="user-fav-adaptation" aria-describedby="button-addon2" id="user-fav-adaptation">
       <div class="input-group-append">
         <button class="btn btn-outline-info" type="button" id="button-addon2">Find It!</button>
       </div>
@@ -75,13 +105,12 @@
   </div>
 
   </div>
-<!--  <div class="row justify-content-right col-sm-4" id="user-submission"></div> -->
+ <div class="row justify-content-right col-sm-4" id="user-submission"></div> -->
 
 
 
 
-    <div class="row justify-content-around" id="gifs-appear-here">
-    </div>
+
 
 
 
