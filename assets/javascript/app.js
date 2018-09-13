@@ -11,7 +11,7 @@ var cutOffRating = "PG";
 function renderButtons(){
 	for(var i = 0; i < topics.length; i++) {
 		var newButton = $("<button>");
-		newButton.addClass("btn btn-outline-info");
+		newButton.addClass("btn btn-outline-primary btn-lg");
 		newButton.addClass("bookTitle-button");
 		newButton.text(topics[i]);
 		$("#button-container").append(newButton);
@@ -75,55 +75,3 @@ $(document).ready(function(){
 		$("#user-fav-adaptation").val("");
 	});
 });
-
-
-
-
-/*
-$("button").on("click", function() {
-  var title = $(this).attr("data-title");
-  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-    title + "&api_key=UJ4rcCIsCqw4544MYn2mPanM2ZuoI0fX&limit=10&rating=pg";
-
-  $.ajax({
-    url: queryURL,
-    method: "GET"
-  })
-    .then(function(response) {
-        console.log(response);
-      var results = response.data;
-
-      for (var i = 0; i < results.length; i++) {
-        var gifDiv = $("<div class='item'>");
-
-        var rating = results[i].rating;
-
-        var p = $("<p>").text("Rating: " + rating);
-
-        var titleImage = $("<img>");
-        titleImage.attr("src", results[i].images.fixed_height.url);
-
-        gifDiv.prepend(p);
-        gifDiv.prepend(titleImage);
-
-        $("#gifs-appear-here").prepend(gifDiv);
-      }
-    });
-});
-
-// function for animating gifs
-$(".gif").on("click", function() {
-  // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
-  var state = $(this).attr("data-state");
-  // If the clicked image's state is still, update its src attribute to what its data-animate value is.
-  // Then, set the image's data-state to animate
-  // Else set src to the data-still value
-  if (state === "still") {
-    $(this).attr("src", $(this).attr("data-animate"));
-    $(this).attr("data-state", "animate");
-  } else {
-    $(this).attr("src", $(this).attr("data-still"));
-    $(this).attr("data-state", "still");
-  }
-});
-*/
